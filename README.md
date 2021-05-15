@@ -1,4 +1,4 @@
-# Auto Tag
+# Auto Tag for China Regions
 
 [![Build Status](https://img.shields.io/travis/GorillaStack/auto-tag/master.svg?style=for-the-badge)](https://travis-ci.org/GorillaStack/auto-tag)
 [![Software License](https://img.shields.io/github/license/gorillastack/auto-tag.svg?style=for-the-badge)](/LICENSE.md)
