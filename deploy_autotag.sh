@@ -74,7 +74,7 @@ function manage-bucket () {
 
       echo "Creating the ${S3_BUCKET} secure S3 Bucket with all public access blocked..."
 
-      if [ "$MAIN_STACK_AWS_REGION" != 'us-east-1' ] ; then
+      if [ "$MAIN_STACK_AWS_REGION" != 'cn-north-1' ] ; then
         local LOCATION_CONSTRAINT="--create-bucket-configuration LocationConstraint=$MAIN_STACK_AWS_REGION"
       fi
 
@@ -105,10 +105,10 @@ function manage-bucket () {
     "Sid": "AllowAccountId${AWS_ACCOUNT_ID}",
     "Effect": "Allow",
     "Principal": {
-        "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:root"
+        "AWS": "arn:aws-cn:iam::${AWS_ACCOUNT_ID}:root"
     },
     "Action": "s3:GetObject",
-    "Resource": "arn:aws:s3:::${S3_BUCKET}/*"
+    "Resource": "arn:aws-cn:s3:::${S3_BUCKET}/*"
 }
 EOF
           )
@@ -126,10 +126,10 @@ EOF
             "Sid": "AllowAccountId${AWS_ACCOUNT_ID}",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:root"
+                "AWS": "arn:aws-cn:iam::${AWS_ACCOUNT_ID}:root"
             },
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::${S3_BUCKET}/*"
+            "Resource": "arn:aws-cn:s3:::${S3_BUCKET}/*"
         }
     ]
 }
