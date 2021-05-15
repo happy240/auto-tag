@@ -6,7 +6,7 @@
     "MainAwsRegion" : {
       "Description" : "The region where the main auto-tag CloudFormation stack is running",
       "Type" : "String",
-      "Default": "us-west-2"
+      "Default": "cn-northwest-1"
     }
   },
 
